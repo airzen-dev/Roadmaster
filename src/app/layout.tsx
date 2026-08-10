@@ -3,6 +3,7 @@ import { Archivo, Manrope } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MobileBar from '@/components/MobileBar';
+import WhatsappFab from '@/components/WhatsappFab';
 import { branches } from '@/data/branches';
 import { site } from '@/data/site';
 import './globals.css';
@@ -119,6 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <WhatsappFab />
         <MobileBar />
         <script
           type="application/ld+json"
