@@ -1,0 +1,201 @@
+@import 'tailwindcss';
+
+@theme {
+  /* ---- Brand palette, sampled directly from the Roadmaster logo ---- */
+  --color-ink: #0d0d0f; /* logo black */
+  --color-ink-800: #141417;
+  --color-ink-700: #1a1a1e;
+  --color-ink-600: #232328;
+  --color-ink-500: #2e2e35;
+  --color-yellow: #fde640; /* logo racing yellow */
+  --color-yellow-600: #e8cf1f;
+  --color-yellow-300: #fff08a;
+  --color-chalk: #f6f6f7;
+  --color-mute: #a2a2ad;
+  --color-mute-dim: #74747f;
+
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-lift: 0 24px 60px -20px rgb(0 0 0 / 0.7);
+  --shadow-glow: 0 0 0 1px rgb(253 230 64 / 0.5), 0 20px 50px -24px rgb(253 230 64 / 0.28);
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* clears the sticky header when jumping to an anchor */
+    scroll-padding-top: 7rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-chalk);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* room for the mobile action bar */
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-yellow);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-yellow);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Wordmark rule: the yellow line under "ROADMASTER" in the logo. */
+  .rule-yellow::after {
+    content: '';
+    display: block;
+    width: 3.5rem;
+    height: 4px;
+    margin-top: 1rem;
+    background: var(--color-yellow);
+  }
+
+  /* Checkered-flag band lifted from the logo's "R" mark. */
+  .checker {
+    background-image:
+      linear-gradient(45deg, currentColor 25%, transparent 25%, transparent 75%, currentColor 75%),
+      linear-gradient(45deg, currentColor 25%, transparent 25%, transparent 75%, currentColor 75%);
+    background-size: 12px 12px;
+    background-position:
+      0 0,
+      6px 6px;
+  }
+
+  .prose-rm {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-mute);
+  }
+  .prose-rm strong {
+    color: var(--color-chalk);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .container-rm {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .container-rm {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-rm {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+  }
+
+  /* Grain + vignette that stops large dark panels from looking flat. */
+  .texture-grit {
+    position: relative;
+    isolation: isolate;
+  }
+  .texture-grit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: radial-gradient(circle at 20% 0%, rgb(253 230 64 / 0.07), transparent 45%);
+  }
+
+  .reveal {
+    animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .reveal-1 {
+    animation-delay: 0.05s;
+  }
+  .reveal-2 {
+    animation-delay: 0.14s;
+  }
+  .reveal-3 {
+    animation-delay: 0.23s;
+  }
+  .reveal-4 {
+    animation-delay: 0.32s;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation: marquee-x 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .marquee-track {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
