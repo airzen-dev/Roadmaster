@@ -133,7 +133,17 @@ export default function Footer() {
       <div className="border-t border-white/8">
         <div className="container-rm flex flex-col gap-3 py-6 text-[0.75rem] text-mute-dim sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.name}. All rights reserved.
+            {/* The year is the staff entrance: unremarkable to a visitor, and a
+                direct link for anyone who has been told where to click. */}
+            ©{' '}
+            <Link
+              href="/studio/"
+              aria-label="Staff sign in"
+              className="transition-colors hover:text-yellow"
+            >
+              {year}
+            </Link>{' '}
+            {site.name}. All rights reserved.
           </p>
           <p className="font-display tracking-[0.14em] uppercase">
             Est. {site.established} · Proudly South African

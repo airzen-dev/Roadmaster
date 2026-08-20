@@ -15,7 +15,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Photo gallery"
         title="The work, as it actually looks"
-        intro="Our branches, our fleet, our people and the machines we keep rolling. Tap any photo to view it full size."
+        intro="Our branches, our fleet, our people and the machines we keep rolling. Tap any photo or video to open it full size."
         image="/images/gallery/alignment-fortuner.jpg"
         imageAlt="Vehicle on the Roadmaster wheel alignment ramp"
         crumbs={[{ label: 'Gallery' }]}
@@ -24,7 +24,7 @@ export default function GalleryPage() {
 
       <section className="py-14 lg:py-20">
         <div className="container-rm">
-          <GalleryGrid photos={gallery} />
+          <GalleryGrid seed={gallery} />
         </div>
       </section>
 

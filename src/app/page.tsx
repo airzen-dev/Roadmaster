@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import GalleryStrip from '@/components/GalleryStrip';
 import { BreakdownStrip, CtaBand } from '@/components/sections';
 import { iconMap } from '@/components/Icons';
 import { ArrowRight, Check, Clock, Phone, Pin, Siren } from '@/components/Icons';
@@ -368,32 +369,7 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:mt-16 lg:grid-cols-4">
-            {gallery.slice(0, 8).map((p, i) => (
-              <Link
-                key={p.src}
-                href="/gallery/"
-                className={`group relative overflow-hidden rounded-xl ${
-                  i === 0 || i === 5 ? 'col-span-2 aspect-16/11' : 'aspect-square'
-                }`}
-              >
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  fill
-                  sizes="(min-width:1024px) 25vw, 46vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.07]"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <p className="absolute inset-x-4 bottom-3 translate-y-2 text-[0.75rem] leading-snug font-medium text-chalk opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  {p.caption}
-                </p>
-              </Link>
-            ))}
-          </div>
+          <GalleryStrip seed={gallery} />
         </div>
       </section>
 

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "seed-fleet-lineup",
+    "kind": "image",
+    "src": "/images/gallery/fleet-lineup.jpg",
+    "alt": "The full Roadmaster service fleet lined up outside a branded branch at dusk",
+    "caption": "The service fleet: bakkies, crane trucks and mobile units, ready to roll",
+    "width": 960,
+    "height": 640
+  },
+  {
+    "id": "seed-alignment-fortuner",
+    "kind": "image",
+    "src": "/images/gallery/alignment-fortuner.jpg",
+    "alt": "Toyota Fortuner on the wheel alignment ramp fitted with Dunlop Grandtrek AT3G tyres",
+    "caption": "Four-wheel alignment on new Dunlop Grandtrek AT3G fitment",
+    "width": 1400,
+    "height": 883
+  },
+  {
+    "id": "seed-otr-haul-truck",
+    "kind": "image",
+    "src": "/images/gallery/otr-haul-truck.jpg",
+    "alt": "Volvo A40G articulated dump truck on a mine site with Roadmaster OTR tyres",
+    "caption": "On-site OTR service: Volvo A40G articulated hauler",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-richards-bay",
+    "kind": "image",
+    "src": "/images/branches/richards-bay.jpg",
+    "alt": "Roadmaster Richards Bay branch with a line of white service vehicles outside",
+    "caption": "Richards Bay OTR branch and its response fleet",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "seed-jet-park",
+    "kind": "image",
+    "src": "/images/branches/jet-park.jpg",
+    "alt": "Roadmaster Tyre Services Jet Park branch exterior with large branded signage",
+    "caption": "Jet Park, Boksburg, our Gauteng hub",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-otr-delivery-truck",
+    "kind": "image",
+    "src": "/images/gallery/otr-delivery-truck.jpg",
+    "alt": "Crane truck loaded with large earthmover tyres for delivery",
+    "caption": "Earthmover casings loaded for site delivery",
+    "width": 1400,
+    "height": 787
+  },
+  {
+    "id": "seed-workshop-reception",
+    "kind": "image",
+    "src": "/images/gallery/workshop-reception.jpg",
+    "alt": "Roadmaster workshop reception counter and stores entrance",
+    "caption": "Workshop reception and stores",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-alignment-bay",
+    "kind": "image",
+    "src": "/images/gallery/alignment-bay.jpg",
+    "alt": "Bakkie raised on the alignment ramp inside a Roadmaster workshop bay",
+    "caption": "Alignment bay set up for a light commercial",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-kwadukuza",
+    "kind": "image",
+    "src": "/images/branches/kwadukuza.jpg",
+    "alt": "Roadmaster branch workshop bays open with a service bakkie parked outside",
+    "caption": "Open bays and a branded service vehicle on standby",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-workshop-03",
+    "kind": "image",
+    "src": "/images/gallery/workshop-03.jpg",
+    "alt": "Roadmaster workshop interior",
+    "caption": "Inside the workshop",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-workshop-06",
+    "kind": "image",
+    "src": "/images/gallery/workshop-06.jpg",
+    "alt": "Roadmaster tyre bay with commercial tyres",
+    "caption": "Commercial tyre bay",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-workshop-09",
+    "kind": "image",
+    "src": "/images/gallery/workshop-09.jpg",
+    "alt": "Large earthmover tyres being handled at a Roadmaster branch",
+    "caption": "Earthmover casings on the yard",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "seed-photo-f02",
+    "kind": "image",
+    "src": "/images/gallery/photo-f02.jpg",
+    "alt": "Roadmaster Tyre Services work in progress",
+    "caption": "On the job",
+    "width": 800,
+    "height": 536
+  },
+  {
+    "id": "seed-photo-f03",
+    "kind": "image",
+    "src": "/images/gallery/photo-f03.jpg",
+    "alt": "Roadmaster Tyre Services work in progress",
+    "caption": "On the job",
+    "width": 800,
+    "height": 301
+  },
+  {
+    "id": "seed-photo-f05",
+    "kind": "image",
+    "src": "/images/gallery/photo-f05.jpg",
+    "alt": "Roadmaster Tyre Services work in progress",
+    "caption": "On the job",
+    "width": 960,
+    "height": 656
+  },
+  {
+    "id": "seed-photo-w02",
+    "kind": "image",
+    "src": "/images/gallery/photo-w02.jpg",
+    "alt": "Roadmaster earthmover tyre handling",
+    "caption": "Earthmover tyre handling",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "seed-photo-w03",
+    "kind": "image",
+    "src": "/images/gallery/photo-w03.jpg",
+    "alt": "Roadmaster tyre service operation",
+    "caption": "Tyre service operation",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "seed-photo-w04",
+    "kind": "image",
+    "src": "/images/gallery/photo-w04.jpg",
+    "alt": "Roadmaster tyre service operation",
+    "caption": "Tyre service operation",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "seed-south-coast",
+    "kind": "image",
+    "src": "/images/branches/south-coast.jpg",
+    "alt": "Roadmaster South Coast branch exterior in Port Shepstone",
+    "caption": "Port Shepstone, South Coast",
+    "width": 1400,
+    "height": 1000
+  },
+  {
+    "id": "seed-pinetown",
+    "kind": "image",
+    "src": "/images/branches/pinetown.jpg",
+    "alt": "Roadmaster Pinetown Westmead premises exterior",
+    "caption": "Westmead, Pinetown",
+    "width": 1400,
+    "height": 1000
+  }
+]
