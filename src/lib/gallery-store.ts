@@ -75,11 +75,31 @@ export async function signIn(username: string, password: string) {
   try {
     await account().createEmailPasswordSession({ email, password });
   } catch (err) {
-    if (err instanceof AppwriteException && err.type === 'user_session_already_exists') {
-      announce(true);
-      return;
+    // Report what actually went wrong. Blaming the password for every failure
+    // sends people hunting for a typo when the cause is configuration.
+    if (err instanceof AppwriteException) {
+      if (err.type === 'user_session_already_exists') {
+        announce(true);
+        return;
+      }
+      if (err.type === 'general_unknown_origin') {
+        throw new Error(
+          `This site's address is not registered with Appwrite. Add ${
+            typeof window === 'undefined' ? 'it' : window.location.hostname
+          } as a Web platform in the Appwrite console, under Overview → Platforms.`,
+        );
+      }
+      if (err.type === 'user_invalid_credentials' || err.code === 401) {
+        throw new Error('Those details were not accepted. Check the username and password.');
+      }
+      if (err.code === 429) {
+        throw new Error('Too many attempts. Wait a minute and try again.');
+      }
+      throw new Error(`Sign in failed: ${err.message}`);
     }
-    throw new Error('Those details were not accepted. Check the username and password.');
+    throw new Error(
+      'Could not reach Appwrite. Check the connection and that the site is configured.',
+    );
   }
   announce(true);
 }
